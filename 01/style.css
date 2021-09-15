@@ -1,0 +1,41 @@
+body {
+    background:#ccc;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 1.5;
+}
+h1 {
+    font-size: 45px;
+    color: rgb(84, 80, 143)
+}
+img{
+    width: 270px;
+    height: 300px;
+  border-radius: 3%;
+}
+.photo {
+    box-shadow: 0 2px 5px rgb(172, 9, 9);
+    width: 270px;
+    height: 300px;
+    border-radius: 3%;
+    float: left;
+}
+a{
+    box-shadow: 0 5px 10px rgb(168, 107, 36);
+    color: rgb(182, 95, 23);
+}
+p {
+    font-size: 18px;
+    padding: 40px;
+    margin-bottom: 15%;
+    margin-top: 0 auto;
+    padding: 0 auto;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+}
+ul {
+    font-size: 18px;
+}
