@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 25px;
+        }
+
+        input {
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <form id="my_form"
+            onsubmit="alert(decodeURI(new URLSearchParams(Array.from(new FormData(document.getElementById('my_form')))).toString()));return false;">
+                <fieldset>
+                    <legend>Личные данные</legend>
+
+                    <label>Имя Фамилия<input type="text" id="text" placeholder="Иван Дураков"></label>
+                    <br>
+                    <label>Пароль <input type="password" name="userpass"></label>
+                    <br>
+                    <label>email<input type="email" id="email" placeholder="ivandurak@exam.com"></label>
+                    <br>
+                    <label>любимый цвет<input type="color" id="color"></label>
+                    <br>
+                    <label>номер телефона<input type="tel" id="tel"></label>
+                    <br>
+                    <label>сбрось меня<input type="reset" id="reset"></label>
+                    <br>
+                    <label>поиск<input type="search" id="search"></label>
+                    <br>
+
+
+                </fieldset>
+                <fieldset>
+                    <legend>Общее</legend>
+
+                    <label><input type="number">Выбери число</label>
+                    <br>
+                    <label id="radio">что будем пить</label>
+                    <br>
+                    <label><input type="radio" name="drink" value="rad1"> Пиво</label>
+                    <br>
+                    <label><input type="radio" name="drink" value="rad2"> Чай</label>
+                    <br>
+                    <label><input type="radio" name="drink" value="rad3"> Кофе</label>
+                    <br>
+                    <label>Ползунок<input type="range" min="1" max="10" id="range"></label>
+                    <br>
+                    <label>Кнопка<input type="button" id="button" value="button"></label>
+                    <br>
+                    <label><input type="checkbox" name="checkbox" value="checkbox">черный</label>
+                    <label><input type="checkbox" name="checkbox" value="checkbox">розовый</label>
+                    <label><input type="checkbox" name="checkbox" value="checkbox">белый</label>
+                    <br>
+                    <label>Время<input type="time"></label>
+                    <br>
+                    <label>Твой сайт<input type="url"></label>
+
+                </fieldset>
+                <fieldset>
+                    <legend>Для души</legend>
+
+                    <label>Дата рождения<input type="date"></label>
+                    <br>
+                    <label>Добавить файл<input type="file"></label>
+                    <br>
+                    <label>Скрыто<input type="hidden"></label>
+                    <br>
+                    <label>Добавить картинку<input type="image" alt="image"></label>
+                    <br>
+                    <textarea name="text" placeholder="опиши себя"></textarea>
+
+                </fieldset>
+                <label><input type="submit"></label>
+            </form>
+    </div>
+
+</body>
+
+</html>

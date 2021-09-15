@@ -1,0 +1,14 @@
+body {
+    background-color: grey;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 24px;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.container {
+    border: 4px double black;
+    background: rgb(110, 64, 71);
+    padding: 10px;
+    margin-right: 60%;
+}
