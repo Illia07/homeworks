@@ -1,0 +1,157 @@
+*,
+::before,
+::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+html,
+body {
+    width: 100%;
+}
+
+body {
+    background-color: #3399cc;
+    border: 15px solid #277baf;
+}
+
+.container {
+    width: 90%;
+    max-width: 1170px;
+    margin: 0 auto;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana,
+        sans-serif;
+    color: #fff;
+    margin-top: 50px;
+}
+
+h1 {
+    font-size: 21px;
+    line-height: 32px;
+    font-weight: normal;
+    margin-bottom: 40px;
+}
+
+.wi-sunrise {
+    font-size: 27px;
+    line-height: 39px;
+}
+
+ul {
+    background-color: #fff;
+    padding: 2px;
+    margin-bottom: 37px;
+    font-size: 0;
+}
+
+ul li {
+    display: inline-block;
+    height: 147px;
+    font-size: 22px;
+    line-height: 32px;
+    margin: 2px;
+    padding-top: 26px;
+}
+
+ul li a {
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+    display: inline-block;
+    height: 147px;
+    width: 100%;
+}
+
+.city {
+    margin-bottom: 19px;
+}
+
+.icon {
+    opacity: 70%;
+}
+
+.wi {
+    font-size: 42px;
+}
+
+.wi-celsius {
+    font-size: 32px;
+    line-height: 32px;
+}
+
+span {
+    margin-left: 10px;
+    margin-top: 4px;
+}
+
+.half {
+    width: calc(50% - 4px);
+}
+
+.quater {
+    width: calc(25% - 4px);
+}
+
+.fullsize {
+    width: calc(100% - 4px);
+}
+
+.lisbon {
+    background-color: #3399cc;
+}
+
+.paris {
+    background-color: #33cccc;
+}
+
+.belgrade {
+    background-color: #996699;
+}
+
+.moscow {
+    background-color: #c24747;
+}
+
+.tel-avive {
+    background-color: #e2674a;
+}
+
+.cair {
+    background-color: #ffcc66;
+}
+
+.new-york {
+    background-color: #99cc99;
+}
+
+.new-delhi {
+    background-color: #669999;
+}
+
+.sf {
+    background-color: #cc6699;
+}
+
+.tokyo {
+    background-color: #339966;
+}
+
+.sydney {
+    background-color: #666699;
+}
+
+ul:hover li:not(:hover) {
+    opacity: 0.5;
+}
+
+p {
+    font-size: 16px;
+    line-height: 25px;
+    margin-bottom: 120px;
+}
