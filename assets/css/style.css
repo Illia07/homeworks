@@ -1,0 +1,58 @@
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+
+}
+
+img {
+    vertical-align: top;
+}
+
+body {
+    background-color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    min-width: 350px;
+    background-color: rgb(39, 39, 39);
+}
+
+.container {
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+.header {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 24px;
+}
+.header_name {
+    color: cadetblue;
+}
+ul li, a{
+    list-style: none;
+    display: inline-block;
+   
+    text-decoration: none;
+    color: aqua;
+   
+}
+.btn {
+    background-color: rgb(19, 114, 117);
+    padding: 10px 10px;
+    border-radius: 5px;
+    margin: 20px;
+
+}
+.btn:hover {
+    background-color: blueviolet;
+}
