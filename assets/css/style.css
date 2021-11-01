@@ -40,19 +40,24 @@ body {
 }
 ul li, a{
     list-style: none;
-    display: inline-block;
-   
     text-decoration: none;
     color: aqua;
    
 }
+ul {
+    display: grid;
+    grid-template-columns: 15% 15% 15% 15%;
+    justify-content: space-evenly;
+    padding-bottom: 30px;
+}
+li {
+    margin: 10px;
+    border: 1px solid #666666;
+    padding: 10px;
+}
 .btn {
-    background-color: rgb(19, 114, 117);
     padding: 10px 10px;
     border-radius: 5px;
     margin: 20px;
-
-}
-.btn:hover {
-    background-color: blueviolet;
+    font-weight: 700;
 }
