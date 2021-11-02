@@ -51,7 +51,7 @@ body {
     display: flex;
     align-items: flex-end;
     position: relative;
-    background: url(/assets/images/bigcar.png) center center/cover no-repeat;
+    background: url(/assets/images/bigcar.jpg) center center/cover no-repeat;
 }
 .bigtext {
     z-index: 1;
