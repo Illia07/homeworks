@@ -1,0 +1,7 @@
+@font-face {
+    font-family: "Bazar";
+    src: url("../fonts/bazar.woff2") format("woff2"),
+      url("../fonts/bazar.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
