@@ -1,0 +1,50 @@
+#panel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    background-color: rgba($color: #494949, $alpha: 1.0);
+    padding: 20px 50px;
+    font-size: 18px;
+    z-index: 100000;
+
+    &.info {
+        background-color: rgba($color: #5f55e2, $alpha: 1.0);
+    }
+
+    &.success {
+        background-color: rgba($color: #088d1e, $alpha: 1.0);
+    }
+
+    &.warning {
+        background-color: rgba($color: #dd8e34, $alpha: 1.0);
+    }
+
+    &.danger {
+        background-color: rgba($color: #ff5100c9, $alpha: 1.0);
+    }
+
+    button {
+        border: none;
+        cursor: pointer;
+        background-color: transparent;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        line-height: 20px;
+        font-size: 26px;
+        color: #fff;
+        font-weight: 600;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+
+        &:hover {
+            color: red;
+        }
+    }
+}
