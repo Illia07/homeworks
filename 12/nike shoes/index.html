@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nike</title>
+    <link rel="stylesheet" href="assets/css/style.min.css">
+</head>
+
+<body>
+    <section class="product">
+        <div class="product__card">
+            <div class="product__logo">
+                <a class="product__logo-link" href="#">
+                    <img class="product__logo-img" src="assets/images/logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="product__gallery gallery">
+                <div class="gallery__images-block">
+                    <img class="gallery__image" src="assets/images/Nike-SB-Stefan-Janoski-Max.png"
+                        alt="photo">
+                </div>
+                <ul class="gallery__preview-list">
+                    <li class="gallery__button button--darkblue"><a href="#"
+                            class="gallery__link gallery__link--active"></a></li>
+                    <li class="gallery__button button--white"><a href="#" class="gallery__link"></a></li>
+                    <li class="gallery__button button--red"><a href="#" class="gallery__link"></a></li>
+                    <li class="gallery__button gallery__button-last button--cyan"><a href="#" class="gallery__link"></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="product__info">
+                <div class="product__model-name">Nike SB Stefan Janoski Max</div>
+                <div class="product__description">Unisex Skateboarding Shoe</div>
+                <div class="product__rating rating">
+                    <div class="rating__box">
+                        <div class="rating__container">
+                            <input class="rating__item" type="radio" name="rating" value="5" id="star-5"> <label
+                                class="rating__label" for="star-5">&#9733;</label>
+                            <input class="rating__item" type="radio" name="rating" value="4" id="star-4"> <label
+                                class="rating__label" for="star-4">&#9733;</label>
+                            <input class="rating__item rating__item--checked" type="radio" name="rating" value="3"
+                                id="star-3" checked> <label class="rating__label" for="star-3">&#9733;</label>
+                            <input class="rating__item" type="radio" name="rating" value="2" id="star-2"> <label
+                                class="rating__label" for="star-2">&#9733;</label>
+                            <input class="rating__item" type="radio" name="rating" value="1" id="star-1"> <label
+                                class="rating__label" for="star-1">&#9733;</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="product__select-wrap">
+                    <select class="product__character product__character-first" name="size" id="product_size">
+                        <option disabled selected>Size</option>
+                        <option value="39">39</option>
+                        <option value="40">40</option>
+                        <option value="41">41</option>
+                        <option value="42">42</option>
+                        <option value="43">43</option>
+                        <option value="44">44</option>
+                    </select>
+                    <select class="product__character" name="qty" id="product_qty">
+                        <option disabled selected>Qty</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </div>
+                <button class="product__btn btn" type="button">Add to cart</button>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
