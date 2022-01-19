@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sing in form</title>
+    <link rel="stylesheet" href="assets/css/style.min.css">
+</head>
+<body>
+    <section class="container">
+        <div class="flex">
+            <div class="flex_container">
+            <ul class="menu_list">
+               <li class="menu_list-item"><a class="menu_list-link" href="#">Sing In</a></li>
+               <li class="menu_list-item"><a class="menu_list-link" href="#">Join Us</a></li>
+            </ul>
+                <form class="sign_in_form" name="sign_in_form" action="#" method="POST">
+                    <label class="form_label" for="username" required>Username</label>
+                    <input class="form_input" type="text" name="username" id="username">
+                    <label class="form_label" for="password" required>Password</label>
+                    <input class="form_input" type="password" name="password" id="password">
+                    <input class="checksign" type="checkbox" name="keepsign" id="keepsign" value="keepsign">
+                    <label class="keepsign" for="keepsign">Keep me signed in</label>
+                    <button class="btn" type="submit">Sign in</button>
+                </form>
+                <ul class="foo_menu">
+               <li class="foo_menu-item"><a class="foo_menu-link" href="#">Forgot Password</a></li>
+               <li class="foo_menu-item"><a class="foo_menu-link" href="#">Create an account</a></li>
+            </ul>
+            </div>
+            <div class="shadow_box"></div>
+        </div>
+    </section>
+</body>
+</html>

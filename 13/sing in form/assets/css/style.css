@@ -1,0 +1,196 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+a,
+button {
+  transition: all 0.2s ease;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e5eeee;
+}
+
+.flex {
+  position: relative;
+}
+
+.flex_container {
+  color: #fbf6e4;
+  position: relative;
+  width: 400px;
+  height: 496px;
+  background: #2d21a9 url(../images/bg_img.jpg) left top/cover no-repeat;
+  padding: 49px 70px;
+  letter-spacing: 0.6px;
+  box-shadow: 0 0 20px rgba(2, 41, 120, 0.1);
+  z-index: 1;
+}
+
+.shadow_box {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 5px;
+  background-color: rgba(20, 40, 62, 0.91);
+  box-shadow: 0 0 35px 28px rgba(20, 40, 62, 0.91);
+}
+
+.menu_list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 52px;
+  padding: 0 1px;
+}
+.menu_list-item {
+  margin-right: 24px;
+}
+.menu_list-item:last-child {
+  margin-right: 0;
+}
+.menu_list-item:hover .menu_list-link::after {
+  background-color: #e66a64;
+}
+.menu_list-item--active .menu_list-link::after {
+  background-color: #e66a64;
+}
+.menu_list-item::after {
+  content: "";
+  position: absolute;
+  display: block;
+  background-color: transparent;
+  width: 100%;
+  height: 2px;
+  bottom: -4px;
+}
+
+.menu_list-link {
+  color: #fbf6e4;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 700;
+  position: relative;
+}
+
+.sign_in_form .form_label {
+  font-size: 16px;
+  font-weight: 700;
+  padding-left: 1px;
+  cursor: pointer;
+}
+.sign_in_form .form_input {
+  width: 100%;
+  margin: 7px 0 15px;
+  padding: 7px 5px;
+  font-size: 18px;
+  color: #fbf6e4;
+  letter-spacing: 0.6px;
+  border: 2px solid #9f87c9;
+  background-color: transparent;
+}
+.sign_in_form .checksign {
+  margin-right: 5px;
+  margin-bottom: 44px;
+  cursor: pointer;
+  position: relative;
+  top: 2px;
+  left: 1px;
+}
+.sign_in_form .checksign:checked + .keepsign::after {
+  border-color: #fbf6e4;
+}
+.sign_in_form .keepsign {
+  font-size: 13px;
+  font-weight: 700;
+  position: relative;
+  cursor: pointer;
+}
+.sign_in_form .keepsign::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  background-color: #23ae92;
+  display: block;
+  position: absolute;
+  left: -23px;
+  top: 1px;
+}
+.sign_in_form .keepsign::after {
+  content: "";
+  display: block;
+  width: 3px;
+  height: 6px;
+  border-right: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+  position: absolute;
+  transform: rotate(45deg);
+  top: 4px;
+  left: -17px;
+}
+
+.btn {
+  width: 100%;
+  height: 43px;
+  color: #fbf6e4;
+  font-size: 18px;
+  font-weight: 700;
+  border: none;
+  background-color: #23ae92;
+  margin-bottom: 26px;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: #1a846e;
+}
+
+.foo_menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.foo_menu-item:active .foo_menu-link, .foo_menu-item:hover .foo_menu-link {
+  color: #fff;
+}
+.foo_menu-item:active .foo_menu-link::after, .foo_menu-item:hover .foo_menu-link::after {
+  background-color: #fff;
+}
+.foo_menu-link {
+  font-size: 13px;
+  color: #b9b9cc;
+  text-decoration: none;
+  position: relative;
+}
+.foo_menu-link::after {
+  content: "";
+  position: absolute;
+  display: block;
+  background-color: #b9b9cc;
+  width: 100%;
+  height: 1px;
+  bottom: -4px;
+}
