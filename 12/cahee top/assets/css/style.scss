@@ -1,0 +1,448 @@
+@import "reset";
+
+//fonts
+$logo-ff: "Pacifico",
+cursive;
+$main-ff: "Raleway",
+sans-serif;
+//fonts color
+$header-col: #262626;
+//background-color
+$bgc-main: #f9f8fb;
+$bgc-about: #00baba;
+//buttons
+$bgc-btn-1: #ff6033;
+
+body {
+    font-family: $main-ff;
+    font-size: 17px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.text {
+    font-weight: 300;
+    line-height: 27px;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 90px;
+}
+
+.hamburger {
+    display: none;
+}
+
+.mmb {
+    position: fixed;
+    top: 0;
+    left: -110%;
+    width: 100%;
+    height: 100%;
+    max-width: 400px;
+    color: $header-col;
+    background-color: $bgc-main;
+    box-shadow: 0 0 5px #000;
+    transition: all 0.2s ease;
+    z-index: 201;
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        background-color: darken($color: $bgc-main, $amount: 5);
+        height: 80px;
+    }
+
+    &__logo {
+        font-family: $logo-ff;
+        font-size: 40px;
+        line-height: 40px;
+        font-weight: 400;
+    }
+}
+
+#mobile-menu-shadow {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(3px);
+    z-index: 200;
+}
+
+.open {
+    .mmb {
+        left: 0;
+    }
+
+    #mobile-menu-shadow {
+        display: block;
+    }
+}
+
+.mob-menu {
+    min-height: calc(100vh - 80px);
+    overflow-y: scroll;
+
+    &__item {
+        border-bottom: 1px solid $bgc-btn-1;
+    }
+
+    &__link {
+        display: inline-block;
+        padding: 15px;
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: 700;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $header-col;
+        width: 100%;
+
+        &:active,
+        &:hover {
+            background-color: $bgc-btn-1;
+            color: #fff;
+        }
+    }
+}
+
+#to-top {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 4%;
+    height: 100%;
+    background-color: rgba($color: $bgc-main, $alpha: 0.7);
+    backdrop-filter: blur(3px);
+    box-shadow: 2px 0 5px rgba($color: #000000, $alpha: 0.1);
+    opacity: 0;
+    transition: all 0.2s ease;
+    z-index: 50;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+#to-top-mobile {
+    display: none;
+    position: fixed;
+    right: 25px;
+    bottom: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba($color: #000000, $alpha: 0.2);
+
+    &::before {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 21px;
+        left: 17.5px;
+        border-left: 2px solid #000;
+        border-top: 2px solid #000;
+        width: 14px;
+        height: 14px;
+        transform: rotate(45deg);
+    }
+
+    &:active,
+    &:hover {
+        background-color: rgba($color: #000000, $alpha: 0.3);
+    }
+}
+
+.first-screen {
+    background: $bgc-main url(../images/strawberry.jpg) right 38.2% bottom no-repeat;
+}
+
+.header {
+    height: 150px;
+    width: 100%;
+    z-index: 100;
+    position: fixed;
+
+    .container {
+        height: 100%;
+    }
+
+    .flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+    }
+
+    &__logo {
+        color: $header-col;
+        font-family: $logo-ff;
+        font-size: 50px;
+        font-weight: 400;
+        text-decoration: none;
+    }
+
+    &__logo :hover {
+        color: #ff6033;
+    }
+
+    &.fixed {
+        height: 60px;
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+        background-color: rgba($color: $bgc-main, $alpha: 0.7);
+        backdrop-filter: blur(3px);
+
+        .header__logo {
+            font-size: 32px;
+        }
+    }
+}
+
+.menu {
+    &__list {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &__item {
+        margin-right: 37.5px;
+
+        &--last {
+            margin-right: 0;
+        }
+
+        &:active .menu__link::before,
+        &:hover .menu__link::before {
+            background-color: $bgc-btn-1;
+        }
+    }
+
+    &__link {
+        text-transform: uppercase;
+        font-weight: 700;
+        text-decoration: none;
+        color: $header-col;
+        font-size: 16px;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            display: block;
+            background-color: transparent;
+            width: 101%;
+            height: 3px;
+            top: -9px;
+        }
+    }
+}
+
+.home {
+    position: relative;
+    height: 100vh;
+    padding: 200px 0 240px;
+
+    .container {
+        height: 100%;
+    }
+
+    .flex {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        height: 100%;
+    }
+
+    &__text-block {
+        margin-top: 40px;
+        max-width: 375px;
+        padding: 10px;
+        margin-bottom: 17px;
+    }
+
+    &__title {
+        font-weight: 900;
+        font-size: 60px;
+        margin-bottom: 15px;
+    }
+
+    &__text {
+        line-height: 27px;
+        font-weight: 300;
+    }
+}
+
+.about {
+    background: $bgc-about url(../images/strawberry_plate.png) top 62% left 33.5% no-repeat;
+    padding: 160px 0 204px;
+
+    .flex {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    &__text-block {
+        max-width: 501px;
+        margin-bottom: 14px;
+    }
+
+    &__title {
+        color: #fff;
+        margin-bottom: 10px;
+    }
+
+    &__text {
+        color: #fff;
+        margin-bottom: 10px;
+    }
+}
+
+.icon-scroll,
+.icon-scroll:before {
+    position: absolute;
+    left: 50%;
+}
+
+.icon-scroll {
+    width: 25px;
+    height: 40px;
+    bottom: 68px;
+    margin-left: -12px;
+    box-shadow: inset 0 0 0 1px #000;
+    border-radius: 15px;
+
+    &:before {
+        content: "";
+        width: 4px;
+        height: 11px;
+        background: #000;
+        top: 6px;
+        left: 11px;
+        border-radius: 3px;
+    }
+}
+
+@keyframes scroll {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+}
+
+.btn {
+    font-size: 20px;
+    font-weight: 300;
+    width: 200px;
+    height: 55px;
+    display: block;
+    line-height: 55px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: #000;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+
+.btn--orange {
+    background-color: $bgc-btn-1;
+
+    &:hover {
+        background-color: darken($color: $bgc-btn-1, $amount: 15);
+    }
+}
+
+@media screen and (max-width: 1860px) {
+    .home__text-block {
+        background-color: rgba($color: $bgc-main, $alpha: 0.6);
+        box-shadow: 0 0 3px $bgc-main;
+    }
+
+    .about__text-block {
+        background-color: rgba($color: $bgc-about, $alpha: 0.6);
+        box-shadow: 0 0 3px $bgc-about;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .menu__item {
+        margin-right: 20px;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    body {
+        font-size: 18px;
+    }
+
+    .first-screen {
+        background: $bgc-main url(../images/strawberry.jpg) right bottom / cover no-repeat;
+    }
+
+    .header {
+        height: 80px;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    #to-top {
+        display: none;
+    }
+
+    #to-top-mobile {
+        display: block;
+    }
+
+    .about {
+        background: $bgc-about url(../images/strawberry_plate.png) left / contain no-repeat;
+        padding: 100px 0 130px;
+    }
+}
+
+@media screen and (max-width: 602px) {
+    .about {
+        background: $bgc-about url(../images/strawberry_plate.png) center center / cover no-repeat;
+    }
+}
+
+@media screen and (max-width: 465px) {
+    .title {
+        font-size: 60px;
+    }
+}
+
+@media screen and (max-height: 800px) {
+    .icon-scroll {
+        bottom: 20px;
+    }
+}
+
+@media screen and (max-height: 500px) {
+    .header {
+        height: 80px;
+    }
+}

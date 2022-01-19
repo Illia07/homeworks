@@ -1,0 +1,413 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+a,
+button {
+  transition: all 0.2s ease;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 17px;
+}
+
+.container {
+  width: 90%;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.text {
+  font-weight: 300;
+  line-height: 27px;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 90px;
+}
+
+.hamburger {
+  display: none;
+}
+
+.mmb {
+  position: fixed;
+  top: 0;
+  left: -110%;
+  width: 100%;
+  height: 100%;
+  max-width: 400px;
+  color: #262626;
+  background-color: #f9f8fb;
+  box-shadow: 0 0 5px #000;
+  transition: all 0.2s ease;
+  z-index: 201;
+}
+.mmb__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #ebe8f2;
+  height: 80px;
+}
+.mmb__logo {
+  font-family: "Pacifico", cursive;
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: 400;
+}
+
+#mobile-menu-shadow {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(3px);
+  z-index: 200;
+}
+
+.open .mmb {
+  left: 0;
+}
+.open #mobile-menu-shadow {
+  display: block;
+}
+
+.mob-menu {
+  min-height: calc(100vh - 80px);
+  overflow-y: scroll;
+}
+.mob-menu__item {
+  border-bottom: 1px solid #ff6033;
+}
+.mob-menu__link {
+  display: inline-block;
+  padding: 15px;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #262626;
+  width: 100%;
+}
+.mob-menu__link:active, .mob-menu__link:hover {
+  background-color: #ff6033;
+  color: #fff;
+}
+
+#to-top {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 4%;
+  height: 100%;
+  background-color: rgba(249, 248, 251, 0.7);
+  backdrop-filter: blur(3px);
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transition: all 0.2s ease;
+  z-index: 50;
+}
+#to-top:hover {
+  opacity: 1;
+}
+
+#to-top-mobile {
+  display: none;
+  position: fixed;
+  right: 25px;
+  bottom: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+#to-top-mobile::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 21px;
+  left: 17.5px;
+  border-left: 2px solid #000;
+  border-top: 2px solid #000;
+  width: 14px;
+  height: 14px;
+  transform: rotate(45deg);
+}
+#to-top-mobile:active, #to-top-mobile:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.first-screen {
+  background: #f9f8fb url(../images/strawberry.jpg) right 38.2% bottom no-repeat;
+}
+
+.header {
+  height: 150px;
+  width: 100%;
+  z-index: 100;
+  position: fixed;
+}
+.header .container {
+  height: 100%;
+}
+.header .flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+.header__logo {
+  color: #262626;
+  font-family: "Pacifico", cursive;
+  font-size: 50px;
+  font-weight: 400;
+  text-decoration: none;
+}
+.header__logo :hover {
+  color: #ff6033;
+}
+.header.fixed {
+  height: 60px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  background-color: rgba(249, 248, 251, 0.7);
+  backdrop-filter: blur(3px);
+}
+.header.fixed .header__logo {
+  font-size: 32px;
+}
+
+.menu__list {
+  display: flex;
+  justify-content: flex-end;
+}
+.menu__item {
+  margin-right: 37.5px;
+}
+.menu__item--last {
+  margin-right: 0;
+}
+.menu__item:active .menu__link::before, .menu__item:hover .menu__link::before {
+  background-color: #ff6033;
+}
+.menu__link {
+  text-transform: uppercase;
+  font-weight: 700;
+  text-decoration: none;
+  color: #262626;
+  font-size: 16px;
+  position: relative;
+}
+.menu__link::before {
+  content: "";
+  position: absolute;
+  display: block;
+  background-color: transparent;
+  width: 101%;
+  height: 3px;
+  top: -9px;
+}
+
+.home {
+  position: relative;
+  height: 100vh;
+  padding: 200px 0 240px;
+}
+.home .container {
+  height: 100%;
+}
+.home .flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+}
+.home__text-block {
+  margin-top: 40px;
+  max-width: 375px;
+  padding: 10px;
+  margin-bottom: 17px;
+}
+.home__title {
+  font-weight: 900;
+  font-size: 60px;
+  margin-bottom: 15px;
+}
+.home__text {
+  line-height: 27px;
+  font-weight: 300;
+}
+
+.about {
+  background: #00baba url(../images/strawberry_plate.png) top 62% left 33.5% no-repeat;
+  padding: 160px 0 204px;
+}
+.about .flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+.about__text-block {
+  max-width: 501px;
+  margin-bottom: 14px;
+}
+.about__title {
+  color: #fff;
+  margin-bottom: 10px;
+}
+.about__text {
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.icon-scroll,
+.icon-scroll:before {
+  position: absolute;
+  left: 50%;
+}
+
+.icon-scroll {
+  width: 25px;
+  height: 40px;
+  bottom: 68px;
+  margin-left: -12px;
+  box-shadow: inset 0 0 0 1px #000;
+  border-radius: 15px;
+}
+.icon-scroll:before {
+  content: "";
+  width: 4px;
+  height: 11px;
+  background: #000;
+  top: 6px;
+  left: 11px;
+  border-radius: 3px;
+}
+
+@keyframes scroll {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+}
+.btn {
+  font-size: 20px;
+  font-weight: 300;
+  width: 200px;
+  height: 55px;
+  display: block;
+  line-height: 55px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: #000;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+
+.btn--orange {
+  background-color: #ff6033;
+}
+.btn--orange:hover {
+  background-color: #e63300;
+}
+
+@media screen and (max-width: 1860px) {
+  .home__text-block {
+    background-color: rgba(249, 248, 251, 0.6);
+    box-shadow: 0 0 3px #f9f8fb;
+  }
+
+  .about__text-block {
+    background-color: rgba(0, 186, 186, 0.6);
+    box-shadow: 0 0 3px #00baba;
+  }
+}
+@media screen and (max-width: 960px) {
+  .menu__item {
+    margin-right: 20px;
+  }
+}
+@media screen and (max-width: 760px) {
+  body {
+    font-size: 18px;
+  }
+
+  .first-screen {
+    background: #f9f8fb url(../images/strawberry.jpg) right bottom/cover no-repeat;
+  }
+
+  .header {
+    height: 80px;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  #to-top {
+    display: none;
+  }
+
+  #to-top-mobile {
+    display: block;
+  }
+
+  .about {
+    background: #00baba url(../images/strawberry_plate.png) left/contain no-repeat;
+    padding: 100px 0 130px;
+  }
+}
+@media screen and (max-width: 602px) {
+  .about {
+    background: #00baba url(../images/strawberry_plate.png) center center/cover no-repeat;
+  }
+}
+@media screen and (max-width: 465px) {
+  .title {
+    font-size: 60px;
+  }
+}
+@media screen and (max-height: 800px) {
+  .icon-scroll {
+    bottom: 20px;
+  }
+}
+@media screen and (max-height: 500px) {
+  .header {
+    height: 80px;
+  }
+}
